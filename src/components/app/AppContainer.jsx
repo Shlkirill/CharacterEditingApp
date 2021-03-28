@@ -18,7 +18,7 @@ const AppContainer = (props) => {
 
     useEffect(() => {
         if (props.id) props.initalLifeParameters()
-    }, [props.basicParameters])
+    }, [props.basicParameters]) // Инициализируем характеристики и скиллы персонажа, отталкиваясь от его параметров 
 
     return (
         <div>

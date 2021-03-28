@@ -6,7 +6,8 @@ const CharacterEditing = ({ pointParm, basicParameters, editParmeters }) => {
 
     let arrParameters = basicParameters.map((item, index) => {
         return <Parameter key={index} name={item.name} points={item.points} editParmeters={editParmeters} />
-    })
+    }) // Общий массив со всеми параметрами персонажа
+
     return (
         <div className={styles.container}>
             <div className={styles.characterEditing}>

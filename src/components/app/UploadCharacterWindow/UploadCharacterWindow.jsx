@@ -18,7 +18,7 @@ const UploadCharacterWindow = ({ charcters, setUploadMode, getCharcters, getChar
             </div>
             <p className={styles.name}>{item.name}</p>
         </div>
-    })
+    }) // Получаем список всех пресонажей
 
     return (
         <div className={styles.container} onClick={(e) => { if (e.target == e.currentTarget) setUploadMode(false) }}>

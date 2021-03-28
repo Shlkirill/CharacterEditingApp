@@ -12,7 +12,7 @@ let initialState = {
 const allCharcterReducerforUpload = (state = initialState, action) => {
     let stateCopy;
     switch (action.type) {
-        case GET_CHARCTERS:
+        case GET_CHARCTERS: // Добавляем в список всех персонажей, которые пришли с сервера
             stateCopy = {
                 ...state,
                 charcters: action.charcters

@@ -10,6 +10,7 @@ const Parameter = ({ name, points, editParmeters }) => {
     const onPlus = () => {
         editParmeters(name, 'PLUS')
     }
+    
     const onMinus = () => {
         editParmeters(name, 'MINUS')
     }

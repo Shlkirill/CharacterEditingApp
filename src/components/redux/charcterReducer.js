@@ -19,12 +19,12 @@ let initialState = {
 const charcterReducer = (state = initialState, action) => {
     let stateCopy;
     switch (action.type) {
-        case GET_CHARCTER_INFO:
+        case GET_CHARCTER_INFO: // Загружаем информацию с сервера
             stateCopy = {
                 ...action.info
             }
             return stateCopy;
-        case INITIAL_LIFE:
+        case INITIAL_LIFE: //Инициализируем характеристики и скиллы персонажа, отталкиваясь от его параметров 
             let strongParametr = state.basicParameters.find(item => item.name == 'Сила')
             let agility = state.basicParameters.find(item => item.name == 'Ловкость')
             let intellect = state.basicParameters.find(item => item.name == 'Интелект')
@@ -49,7 +49,7 @@ const charcterReducer = (state = initialState, action) => {
                 }
             }
             return stateCopy
-        case EDIT_PARAMETERS:
+        case EDIT_PARAMETERS: // Редактируем параметры
             let pointParmCopy = state.pointParm;
             let basicParametersCopy = state.basicParameters.map(item => {
                 if (item.name == action.parameter) {
@@ -75,13 +75,13 @@ const charcterReducer = (state = initialState, action) => {
             }
 
             return stateCopy;
-        case EDIT_NAME:
+        case EDIT_NAME: // Редактируем имя
             stateCopy = {
                 ...state,
                 name: action.newName
             }
             return stateCopy
-        case DAMAGE_USER: {
+        case DAMAGE_USER: { // Наносим урон 
             let dmgLife = 0;
             if (state.lifeParameter > 0) dmgLife = state.lifeParameter - 1
             stateCopy = {
@@ -99,7 +99,7 @@ const charcterReducer = (state = initialState, action) => {
 export const getCharTC = (id) => {
     return (
         async (dispatch) => {
-            let response = await appApi.apiGetInfoCharcter(id)
+            let response = await appApi.apiGetInfoCharcter(id) 
             dispatch(getInfoCharcterAC(response))
         }
     )

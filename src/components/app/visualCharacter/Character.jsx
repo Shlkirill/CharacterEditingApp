@@ -10,17 +10,17 @@ const Character = ({ name, avatar, lifeParameter, energy, evasion, editName, dam
     let lifeLogoArr = []
     for (let i = 0; i < lifeParameter; i++) {
         lifeLogoArr.push(<FontAwesomeIcon icon={faHeart} className={styles.lifeLogo} />)
-    }
+    } // Считаем количество жизненной силы
 
     let energyLogoArr = []
     for (let i = 0; i < energy; i++) {
         energyLogoArr.push(<FontAwesomeIcon icon={faBolt} className={styles.energyLogo} />)
-    }
+    } // Считаем количество энергии
 
     let evasionLogoArr = []
     for (let i = 0; i < evasion; i++) {
         evasionLogoArr.push(<FontAwesomeIcon icon={faRunning} className={styles.evasionLogo} />)
-    }
+    }   // Считаем количество уклонения
 
     const editNameButton = <FontAwesomeIcon icon={faPen} className={styles.editName}
         onClick={() => { setEditNameMode(true) }} />
