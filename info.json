@@ -3,14 +3,14 @@
     {
       "id": "1",
       "name": "kirill2222",
-      "pointParm": 9,
-      "lifeParameter": 4,
+      "pointParm": 10,
+      "lifeParameter": 3,
       "energy": 10,
       "evasion": 0,
       "basicParameters": [
         {
           "name": "Сила",
-          "points": 1
+          "points": 0
         },
         {
           "name": "Ловкость",
@@ -26,7 +26,7 @@
         }
       ],
       "skills": {
-        "attack": 1,
+        "attack": 0,
         "archery": 0,
         "stealth": 0,
         "learnability": 0,
