@@ -1,0 +1,36 @@
+.skills {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+.item {
+    display: flex;
+    justify-content: center;
+    margin: 0 5px;
+}
+.title, .lvl {
+    margin: 0px;
+    padding-bottom: 5px;
+    font-style: italic;
+    text-align: center;
+}
+.skillLogo:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.wrapperSkill {
+    margin: 0 2px;
+}
+.skill {
+    position: relative;
+}
+
+.skillDisable {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 64px;
+    height: 64px;
+    background-color: rgba(0, 0, 0, 0.89);
+    border-radius: 10px;
+}

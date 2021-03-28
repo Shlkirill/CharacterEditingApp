@@ -1,0 +1,100 @@
+.container {
+    background-color: rgba(137, 43, 226, 0.301);
+    border-right: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.characterEditing {
+    position: relative;
+}
+
+.characterLogoStyle {
+    max-height: 350px;
+}
+
+.nameInfo {
+    text-align: center;
+    font-size: 20px;
+    height: 30px;
+    margin: 10px 0;
+}
+
+.name {
+    margin: 0px;
+    font-weight: bold;
+}
+.inputName {
+    background: none;
+    border: none;
+    border-bottom: 2px solid #000;
+    text-align: center;
+    outline: none;
+    font-size: 20px;
+}
+.takeName, .editName {
+    position: absolute;
+    right: 15px;
+    color: rgb(19, 230, 0);
+}
+.takeName {
+    font-size: 30px;
+    bottom: 0px;
+}
+.editName {
+    font-size: 25px;
+    opacity: 0.5;
+    bottom: 5px;
+}
+.editName:hover, .takeName:hover {
+    cursor: pointer;
+}
+.editName:hover {
+    opacity: 1;
+}
+.editName:active {
+    bottom: 0px;
+}
+.takeName:active {
+    bottom: -5px;
+}
+.lifeParameters {
+    margin: 15px;
+    font-size: 18px;
+}
+.life, .energy, .evasion {
+    height: 24px;
+}
+.lifeLogo, .energyLogo, .evasionLogo {
+    margin-right: 5px;
+}
+
+.lifeLogo {
+    color: red;
+}
+
+.energyLogo {
+    color: rgb(229, 255, 0);
+}
+.evasionLogo {
+    color: rgb(0, 26, 255);
+}
+.damageIcon {
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    font-size: 50px;
+    color: rgb(136, 0, 0);
+    transition: all 500ms;
+}
+
+.damageIcon:hover {
+    cursor: pointer;
+    transform: rotate(-130deg);
+    color: rgb(255, 0, 0);
+}
+
+.damageIcon:active {
+    right: 30px;
+    top: 30px;
+}

@@ -1,0 +1,42 @@
+{
+  "characters": [
+    {
+      "id": "1",
+      "name": "kirill2222",
+      "pointParm": 9,
+      "lifeParameter": 4,
+      "energy": 10,
+      "evasion": 0,
+      "basicParameters": [
+        {
+          "name": "Сила",
+          "points": 1
+        },
+        {
+          "name": "Ловкость",
+          "points": 0
+        },
+        {
+          "name": "Интелект",
+          "points": 0
+        },
+        {
+          "name": "Харизма",
+          "points": 0
+        }
+      ],
+      "skills": {
+        "attack": 1,
+        "archery": 0,
+        "stealth": 0,
+        "learnability": 0,
+        "survival": 0,
+        "medicine": 0,
+        "intimidation": 0,
+        "insight": 0,
+        "appearance": 0,
+        "manipulation": 0
+      }
+    }
+  ]
+}

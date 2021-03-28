@@ -1,0 +1,67 @@
+import React, { useState } from 'react'
+import styles from './Character.module.css'
+import characterLogo from '../../../img/characterUser.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeart, faBolt, faRunning, faPen, faCheck, faFistRaised } from '@fortawesome/free-solid-svg-icons'
+
+
+const Character = ({ name, lifeParameter, energy, evasion, editName, damageUser }) => {
+    let [editNameMode, setEditNameMode] = useState(false)
+
+    let lifeLogoArr = []
+    for (let i = 0; i < lifeParameter; i++) {
+        lifeLogoArr.push(<FontAwesomeIcon icon={faHeart} className={styles.lifeLogo} />)
+    }
+
+    let energyLogoArr = []
+    for (let i = 0; i < energy; i++) {
+        energyLogoArr.push(<FontAwesomeIcon icon={faBolt} className={styles.energyLogo} />)
+    }
+
+    let evasionLogoArr = []
+    for (let i = 0; i < evasion; i++) {
+        evasionLogoArr.push(<FontAwesomeIcon icon={faRunning} className={styles.evasionLogo} />)
+    }
+
+    const editNameButton = <FontAwesomeIcon icon={faPen} className={styles.editName}
+        onClick={() => { setEditNameMode(true) }} />
+    const takeName = <FontAwesomeIcon icon={faCheck} className={styles.takeName}
+        onClick={() => { setEditNameMode(false) }} />
+    const damageIcon = <FontAwesomeIcon icon={faFistRaised} className={styles.damageIcon} onClick={() => { damageUser() }} />
+
+    const onChangeName = (value) => {
+        editName(value)
+    }
+
+    return (
+        <div className={styles.container}>
+            <div className={styles.characterEditing}>
+                <div className={styles.lifeParameters}>
+                    <div className={styles.life}>
+                        {lifeLogoArr}
+                    </div>
+                    <div className={styles.energy}>
+                        {energyLogoArr}
+                    </div>
+                    <div className={styles.evasion}>
+                        {evasionLogoArr}
+                    </div>
+                </div>
+                <img className={styles.characterLogoStyle} src={characterLogo} alt="" />
+                <div className={styles.nameInfo}>
+                    {editNameMode ? <input type="text" value={name} autoFocus={true} className={styles.inputName}
+                        onChange={(e) => {
+                            onChangeName(e.target.value)
+                        }} />
+                        : <p className={styles.name}>{name}</p>}
+                    {editNameMode ? takeName : editNameButton}
+                </div>
+                <div>
+                    {damageIcon}
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Character
