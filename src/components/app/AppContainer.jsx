@@ -6,7 +6,7 @@ import Skills from './skillsCharacter/Skills'
 import Character from './visualCharacter/Character'
 import CharacterEditing from './сharacterEditingComponent/CharacterEditing'
 import Loader from '../../common/Loader'
-import UploadCharacterWindow from './visualCharacter/UploadCharacterWindow/UploadCharacterWindow'
+import UploadCharacterWindow from './UploadCharacterWindow/UploadCharacterWindow'
 import { getCharctersTC } from '../redux/allCharcterReducerforUpload'
 
 const AppContainer = (props) => {

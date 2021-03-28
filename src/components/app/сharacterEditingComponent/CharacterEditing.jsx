@@ -4,7 +4,7 @@ import Parameter from './Parameter'
 
 const CharacterEditing = ({ pointParm, basicParameters, editParmeters }) => {
 
-    let arr = basicParameters.map((item, index) => {
+    let arrParameters = basicParameters.map((item, index) => {
         return <Parameter key={index} name={item.name} points={item.points} editParmeters={editParmeters} />
     })
     return (
@@ -13,7 +13,7 @@ const CharacterEditing = ({ pointParm, basicParameters, editParmeters }) => {
                 <div className={styles.titleParameters}>
                     <p>Достпуные очки:</p><span>{pointParm}</span>
                 </div>
-                {arr}
+                {arrParameters}
             </div>
         </div>
     )
