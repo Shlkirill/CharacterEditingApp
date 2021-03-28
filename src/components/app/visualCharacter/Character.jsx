@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 import styles from './Character.module.css'
-import characterLogo from '../../../img/characterUser.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart, faBolt, faRunning, faPen, faCheck, faFistRaised } from '@fortawesome/free-solid-svg-icons'
 
 
-const Character = ({ name, lifeParameter, energy, evasion, editName, damageUser }) => {
+const Character = ({ name, avatar, lifeParameter, energy, evasion, editName, damageUser }) => {
     let [editNameMode, setEditNameMode] = useState(false)
 
     let lifeLogoArr = []
@@ -47,9 +46,11 @@ const Character = ({ name, lifeParameter, energy, evasion, editName, damageUser 
                         {evasionLogoArr}
                     </div>
                 </div>
-                <img className={styles.characterLogoStyle} src={characterLogo} alt="" />
+                <div className={styles.characterLogoStyle}>
+                    <img src={avatar} alt="" />
+                </div>
                 <div className={styles.nameInfo}>
-                    {editNameMode ? <input type="text" value={name} autoFocus={true} className={styles.inputName}
+                    {editNameMode ? <input type="text" maxLength='10' value={name} autoFocus={true} className={styles.inputName}
                         onChange={(e) => {
                             onChangeName(e.target.value)
                         }} />

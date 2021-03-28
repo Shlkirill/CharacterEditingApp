@@ -18,7 +18,6 @@ let initialState = {
 
 const charcterReducer = (state = initialState, action) => {
     let stateCopy;
-
     switch (action.type) {
         case GET_CHARCTER_INFO:
             stateCopy = {
@@ -97,10 +96,10 @@ const charcterReducer = (state = initialState, action) => {
 }
 
 
-export const getCharTC = (char) => {
+export const getCharTC = (id) => {
     return (
         async (dispatch) => {
-            let response = await appApi.apiGetInfoCharcter()
+            let response = await appApi.apiGetInfoCharcter(id)
             dispatch(getInfoCharcterAC(response))
         }
     )

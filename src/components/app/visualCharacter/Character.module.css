@@ -10,9 +10,13 @@
 }
 
 .characterLogoStyle {
-    max-height: 350px;
+    width: 350px;
+    height: 300px;
+    text-align: center;
 }
-
+.characterLogoStyle img {
+    height: 100%;
+}
 .nameInfo {
     text-align: center;
     font-size: 20px;

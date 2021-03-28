@@ -2,7 +2,86 @@
   "characters": [
     {
       "id": "1",
-      "name": "kirill2222",
+      "name": "Дрефинс",
+      "avatar": "https://cdn1.savepice.ru/uploads/2021/3/28/9ccbc416721d7e21e339b11421d4e122-full.png",
+      "pointParm": 10,
+      "lifeParameter": 3,
+      "energy": 10,
+      "evasion": 0,
+      "basicParameters": [
+        {
+          "name": "Сила",
+          "points": 0
+        },
+        {
+          "name": "Ловкость",
+          "points": 0
+        },
+        {
+          "name": "Интелект",
+          "points": 0
+        },
+        {
+          "name": "Харизма",
+          "points": 0
+        }
+      ],
+      "skills": {
+        "attack": 0,
+        "archery": 0,
+        "stealth": 0,
+        "learnability": 0,
+        "survival": 0,
+        "medicine": 0,
+        "intimidation": 0,
+        "insight": 0,
+        "appearance": 0,
+        "manipulation": 0
+      }
+    },
+    {
+      "id": "2",
+      "name": "Грисельда",
+      "avatar": "https://i.ibb.co/nChfXcn/character-User-3.png",
+      "pointParm": 10,
+      "lifeParameter": 3,
+      "energy": 10,
+      "evasion": 0,
+      "basicParameters": [
+        {
+          "name": "Сила",
+          "points": 0
+        },
+        {
+          "name": "Ловкость",
+          "points": 0
+        },
+        {
+          "name": "Интелект",
+          "points": 0
+        },
+        {
+          "name": "Харизма",
+          "points": 0
+        }
+      ],
+      "skills": {
+        "attack": 0,
+        "archery": 0,
+        "stealth": 0,
+        "learnability": 0,
+        "survival": 0,
+        "medicine": 0,
+        "intimidation": 0,
+        "insight": 0,
+        "appearance": 0,
+        "manipulation": 0
+      }
+    },
+    {
+      "id": "3",
+      "name": "Фазгурис",
+      "avatar": "https://i.ibb.co/qjpTmNy/character-User-2.png",
       "pointParm": 10,
       "lifeParameter": 3,
       "energy": 10,

@@ -6,13 +6,16 @@ const instance = axios.create({
 })
 
 export const appApi = {
-    apiGetInfoCharcter: async () => {
-        let response = await instance.get('/characters/1')
+    apiGetInfoCharcter: async (id) => {
+        let response = await instance.get(`/characters/${id}`)
         return response.data
     },
     apiSaveCharcter: async (id, objCharcter) => {
-        console.log(id, objCharcter)
-        let response = await instance.put(`/characters/${id}`, objCharcter )
-    }
+        await instance.put(`/characters/${id}`, objCharcter )
+    },
+    apiGetCharcters: async () => {
+        let response = await instance.get('/characters')
+        return response.data
+    },
 }
 
